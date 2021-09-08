@@ -101,7 +101,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "assets/js/modernizr.js",
+              "assets/js/main.js",
+              "assets/js/plugins.js",
+              "assets/js/jquery-3.2.1.min.js"
+            ]
           }
         }
       }
