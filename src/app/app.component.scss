@@ -1,0 +1,38 @@
+.s-hero {
+  background-image: url("../assets/images/hero-image.jpg");
+  background-size: inherit;
+  width: 1428px;
+  height: 937px;
+}
+
+/* about section */
+
+.s-about {
+  padding-bottom: 16rem;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.s-about__section--profile::before {
+  content: "";
+  display: block;
+  background-color: #919aa1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: calc(50% + 12vw);
+}
+
+.s-about__section--profile {
+  padding-top: 28rem;
+  padding-bottom: 4rem;
+  min-height: 108rem;
+  position: relative;
+}
+
+/* Skills section */
+
+.s-skill__section {
+  background-color: #1a1a1a;
+}
