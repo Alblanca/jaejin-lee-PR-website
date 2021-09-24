@@ -7,6 +7,7 @@ import { APP_BASE_HREF} from "@angular/common";
 import { HttpClientModule} from "@angular/common/http";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {EmployeeService} from "./services/employee.service";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'},
+    EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
