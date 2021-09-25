@@ -4,6 +4,7 @@ import {timeout} from "rxjs/operators";
 import {Employee} from "./model/employee";
 import {EmployeeService} from "./services/employee.service";
 import {HttpErrorResponse} from "@angular/common/http";
+import {faUserPlus} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit {
   // @ts-ignore
   public employees: Employee[];
   title = 'JL-website';
+  faUsersPlus = faUserPlus;
 
   constructor(private employeeService: EmployeeService) {}
 
@@ -30,6 +32,16 @@ export class AppComponent implements OnInit {
         console.error(error.message);
       }
     )
+  }
+
+  onOpenModal(employee: Employee, mode: string): void {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.style.display = 'none';
+    button.setAttribute('data-toggle', 'modal');
+    if (mode === 'add') {
+      button.setAttribute('data-target', '#addEmployeeModal');
+    }
   }
 
 }

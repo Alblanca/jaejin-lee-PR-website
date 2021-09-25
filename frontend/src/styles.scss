@@ -17,6 +17,37 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css");
 @import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css");
 
+// scss color variables
+$bs-blue: #007bff;
+$bs-indigo: #6610f2;
+$bs-purple: #6f42c1;
+$bs-pink: #e83e8c;
+$bs-red: #d9534f;
+$bs-orange: #fd7e14;
+$bs-yellow: #f0ad4e;
+$bs-green: #4bbf73;
+$bs-teal: #20c997;
+$bs-cyan: #1f9bcf;
+$bs-white: #fff;
+$bs-gray: #919aa1;
+$bs-gray-dark: #343a40;
+$bs-gray-100: #f8f9fa;
+$bs-gray-200: #f7f7f9;
+$bs-gray-300: #eceeef;
+$bs-gray-400: #ced4da;
+$bs-gray-500: #adb5bd;
+$bs-gray-600: #919aa1;
+$bs-gray-700: #55595c;
+$bs-gray-800: #343a40;
+$bs-gray-900: #1a1a1a;
+$bs-primary: #1a1a1a;
+$bs-secondary: #fff;
+$bs-success: #4bbf73;
+$bs-info: #1f9bcf;
+$bs-warning: #f0ad4e;
+$bs-danger: #d9534f;
+$bs-light: #fff;
+
 :root {
   --bs-blue: #007bff;
   --bs-indigo: #6610f2;
@@ -11227,6 +11258,7 @@ th {
 }
 
 /* Custom Styles */
+
 .s-hero {
   width: 100%;
   height: 100vh;
@@ -11256,4 +11288,16 @@ section {
 
 .font-white {
   color: #fff !important;
+}
+
+.clickable {
+  color: $bs-white;
+  position: relative;
+  cursor: pointer;
+}
+
+.clickable:hover {
+  position: relative;
+  cursor: pointer;
+  color: darken($bs-white, 15%);
 }
