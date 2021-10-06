@@ -1,8 +1,41 @@
+/* Hero section */
 .s-hero {
-  background-image: url("../assets/images/hero-image.jpg");
-  background-size: inherit;
-  width: 1428px;
-  height: 937px;
+  width: 100%;
+  background: linear-gradient(rgba(26, 26, 26, 0.445), rgba(26, 26, 26, 1.411)),
+  url("../assets/images/hero-image.svg") no-repeat center / cover;
+  //background-attachment: fixed;
+  display: flex;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-container-1 {
+  width: 90%;
+  height: 100%;
+  max-width: 1000px;
+  margin-right: 6rem;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.hero-container-2 {
+  width: 90%;
+  height: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.hero-container-1 h1 {
+  margin-bottom: 1rem;
 }
 
 /* about section */

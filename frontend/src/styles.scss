@@ -11262,7 +11262,9 @@ th {
 .s-hero {
   width: 100%;
   height: 100vh;
-  min-height: 82rem;
+  min-height: 75rem;
+  margin-top: -15rem;
+  z-index: -1;
   overflow: hidden;
   background-color: transparent;
   position: relative;
