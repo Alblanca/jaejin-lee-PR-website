@@ -95,8 +95,8 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/favicon-32x32.png"
             ],
             "styles": [
               "src/styles.scss"
