@@ -1,19 +1,27 @@
-import {Component, ElementRef, OnInit, Renderer2} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from '@angular/core';
 import { StatusService } from './services/status.service';
 import {timeout} from "rxjs/operators";
 import {Employee} from "./model/employee";
 import {EmployeeService} from "./services/employee.service";
 import {HttpErrorResponse} from "@angular/common/http";
 import {faUserPlus} from "@fortawesome/free-solid-svg-icons";
+import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations:[
+    trigger('fade',
+      [
+        state('void', style({ opacity : 0})),
+        transition(':enter',[ animate(300)]),
+        transition(':leave',[ animate(500)]),
+      ]
+    )]
 })
 export class AppComponent implements OnInit {
-  // @ts-ignore
-  public employees: Employee[];
+  public employees: Employee[] | undefined;
   title = 'JL-website';
   faUsersPlus = faUserPlus;
 
@@ -21,6 +29,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.getEmployees();
+  }
+
+  ngAfterViewInit() {
+
   }
 
   public getEmployees(): void {
@@ -43,5 +55,4 @@ export class AppComponent implements OnInit {
       button.setAttribute('data-target', '#addEmployeeModal');
     }
   }
-
 }

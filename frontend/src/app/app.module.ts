@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {EmployeeService} from "./services/employee.service";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {StickyModule} from "./sticky/sticky.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    StickyModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'},
     EmployeeService],
